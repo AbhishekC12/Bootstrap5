@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        select{
+            width: 150px;
+        }
+    </style>
+    <script>
+        var all = ["Select Movie","Select Cinema","Select Date","Select Timining","Select Seats"];
+        var movies = ["The Godfather","The Shawshank Redemption","The Dark Knight","Angry Men","The Matrix","GoodFellas"];
+        var cinemas = ["PVR","Inox Movies","BookmyShow"];
+        var date = ["Today 3rd September","Tomorrow 4th Setember","Tuesday 5th September","Wednesday 6th September"];
+        var timining = ["9 AM","12 AM","3 PM","6 PM","9 PM"];
+        var seats = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"];
+         var mov = [];
+         var cin = [];
+        function LoadCategories(){
+            all.map(function(name){
+                var option = document.createElement("option");
+                option.text = name;
+                option.value = name;
+                document.getElementById("lstMovies").appendChild(option);
+            })
+        }
+        function bodyload(){
+            LoadCategories();
+        }
+        function LoadMovies(){
+            document.getElementById("lstCinema").innerHTML= "";
+            movies.map(function(movie){
+                var option = document.createElement("option");
+                option.text = movie;
+                option.value = movie;
+                document.getElementById("lstCinema").appendChild(option);
+            })
+        }
+        function SelectChanged(){
+            var categoryName = document.getElementById("lstMovies").value;
+            switch(categoryName)
+            {
+                case "Select Movie":
+                mov = movies;
+                LoadMovies();
+                break;       
+            }
+        }
+        function LoadCinemas(){
+            cinemas.map(function(cinema){
+                var option = document.createElement("option");
+                option.text = cinema;
+                option.value = cinema;
+                document.getElementById("lstCinema").appendChild("option");
+            })
+        }
+        function SelectCinema(){
+            
+        }
+    </script>
+</head>
+<body onload="bodyload()" class="container-fluid">
+    <div class="bg-dark d-flex justify-content-around mt-4">
+        <div class="p-2 m-2">
+            <select id="lstMovies" onchange="SelectChanged()"></select>
+        </div>
+        <div class="p-2 m-2">
+            <select id="lstCinema" onchange="SelectCinema()"></select>
+        </div>
+        <div class="p-2 m-2">
+            <select id="lstDate" onchange="DateChange()"></select>
+        </div>
+        <div class="p-2 m-2">
+            <select id="lstTiming"></select>
+        </div>
+        <div class="p-2 m-2">
+            <select id="lstSeats"></select>
+        </div>
+        <div class="p-2 m-2">
+            <button class="btn btn-danger">BOOK</button>
+        </div>
+    </div>
+</body>
+</html>

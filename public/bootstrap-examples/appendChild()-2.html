@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            var Register = document.createElement("button");
+            Register.innerHTML = "Register"
+            document.querySelector("nav").appendChild(Register)
+
+            var contact = document.createElement("button");
+            contact.innerHTML = "Contact"
+            document.querySelector("nav").appendChild(contact)
+
+            var pic = document.createElement("img");
+            pic.src="/public/images/mens10.jpg"
+            pic.width = "200"
+            pic.height = "200"
+           document.querySelector("figure").appendChild(pic)
+
+           var caption = document.createElement("figcaption");
+           caption.innerHTML = "Men Fashion"
+           
+           document.querySelector("figure").appendChild(caption)
+        }
+    </script>
+</head>
+<body onload ="bodyload()">
+    <h3>Shopper</h3>
+   <nav></nav>
+    <figure>
+
+    </figure>
+</body>
+</html>   

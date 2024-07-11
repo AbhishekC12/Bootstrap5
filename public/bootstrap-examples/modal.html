@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    
+    <div>
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#details">Product Details</button>
+        </div>
+    <div class="modal fade" id="details">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Realme Mobiles</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="m-2">
+                        <dt>Name</dt>
+                        <dd>Realme</dd>
+                        <dt>Preview</dt>
+                        <dd class="modal-footer">
+                            <img src="/public/images/realme2.jpeg" height="200" width="300">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="modal fade" id="login">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h3><span class="bi bi-person-fill"></span>User Login</h3>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> User Name</dt>
+                            <dd><input type="text" class="form-control"></dd>
+                            <dt> Password </dt>
+                            <dd><input type="text" class="form-control"></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Login</button>
+                        <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
